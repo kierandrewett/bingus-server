@@ -1,0 +1,16 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node ."
+  },
+  "dependencies": {
+    "bingus": "../",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "ts-node": "^10.2.1"
+  }
+}
