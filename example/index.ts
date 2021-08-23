@@ -17,5 +17,14 @@ app.get("/json", (req, res) => {
     }
 })
 
+app.get("/404", (req, res) => {
+    res.status(404);
+
+    return {
+        ok: false,
+        error: 404
+    }
+})
+
 app.start();
 
