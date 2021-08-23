@@ -1,6 +1,6 @@
 {
   "name": "bingus",
-  "version": "0.0.1",
+  "version": "0.0.1-rc1",
   "description": "Bingus HTTP Server",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
