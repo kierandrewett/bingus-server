@@ -1,5 +1,5 @@
 import { defaultSecurityOptions } from "../config/security";
-import { log } from "../log";
+import { base, log } from "../log";
 import { Server } from "../server";
 import { ServerSecurityFeatures } from "../types/server";
 
@@ -19,10 +19,12 @@ export const setupSecurityFeatures = (application: Server, options: boolean | Se
     }
 
     for(const [key, value] of Object.entries(features)) {
-        if(value) log(`Security: feature "${key}" is enabled`);
+        if(value) base("security", [`Feature ${key} is enabled.`]);
     }
 
-    application.use((req, res) => {
+    application.use((req, res, next) => {
         if(features.disablePoweredBy) res.removeHeader("X-Powered-By");
+
+        next();
     })
 }

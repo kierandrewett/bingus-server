@@ -10,4 +10,12 @@ app.get("/", (req, res) => {
     return "Hello world! 👋"
 })
 
+app.get("/json", (req, res) => {
+    return {
+        ok: true,
+        data: "bingus bongus"
+    }
+})
+
 app.start();
+
