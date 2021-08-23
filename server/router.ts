@@ -9,7 +9,7 @@ export class Router {
         const app: any = this.app;
 
         const doLogicExpectResult = (req: Request, res: Response, next?: () => void) => {
-            const response = logic.call(this, req, res);
+            const response = logic.call(this, req, res, next);
             const type = typeof(response);
 
             if(response === undefined) return res.end();
